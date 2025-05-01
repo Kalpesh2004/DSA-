@@ -43,7 +43,7 @@ class LL
             System.out.print("|" +temp.data +"|");
             temp = temp.next;
         }
-        System.out.println("null";)
+        System.out.println("null");
     }
 }
 class SinglyLL
