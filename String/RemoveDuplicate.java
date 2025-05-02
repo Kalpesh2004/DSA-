@@ -1,22 +1,21 @@
+import java.util.HashSet;
+import java.util.Set;
+
 public class RemoveDuplicate {
-    
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         String str = "programming";
-
         StringBuilder sbl = new StringBuilder();
-        for(int i = 0; i < str.length(); i++)
-        {
-            char ch = str.charAt(i);
-            int idx = str.indexOf(ch, i+1);
+        Set<Character> seen = new HashSet<>();
 
-            if(idx == -1)
-            {
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if (!seen.contains(ch)) {
+                seen.add(ch);
                 sbl.append(ch);
             }
         }
-        System.out.println(sbl);
 
-
+        System.out.println(sbl);  // Output: progamin
     }
 }
+
