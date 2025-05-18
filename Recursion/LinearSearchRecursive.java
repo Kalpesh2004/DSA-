@@ -2,12 +2,10 @@ public class LinearSearchRecursive{
     public static void main(String[] args) {
         int[] arr = {3,4,6,2,7};
         int target = 6;
+ 
+        System.out.println("Target Found:"+find(arr,target,0));
 
-        boolean bRet = find(arr,target,0);
-        System.out.println(bRet);
-
-        int iRet = findIndex(arr,target,0);
-        System.out.println(iRet);
+        System.out.println("Target Index: "+findIndex(arr,target,0));
         
     }
     static boolean find(int[] arr, int target, int index)
